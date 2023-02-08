@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTS Cak Lontong</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js"></script>
+</head>
+
+<body>
+  <div id="login-page" class="modal-login">
+    <div class="mulai-main">  	
+        <div class="login-game">
+          <form>
+            <p style="text-align:center"  class="isi-nama">Silakan Isi Nama <br> Korban Hari Ini</p>
+            <input id="username" class="input-nama-pemain" type="text" name="txt" placeholder="Masukan Nama Kamu" required="">
+            <button type="button" onclick="login()" class="mulaimain">Mulai Main</button>
+            <img src="images/lontong.png" alt="cak-lontong">
+          </form>
+        </div>
+    </div>
+  </div>
+
+  
+  
+  <!-- start Container -->
+  <section id="Info">
+    <!-- start Info -->
+    <div class="container">
+      <div class="kiri">
+        <div class="container__kiri_kiri">
+          <button class="button keluar-syon" id ="reset-button" onclick="keluar()"><span>❌</span></button>
+        </div>
+        <div class="container__kiri_kanan">
+          <h3 class="username">Hai <span id = "nama-user">[Input Nama User - JS]</span></h3>
+          <h3 class="score"> Score Kamu: <span id = "score-user">[Input Score User - JS]</span></h3>
+        </div>
+      </div>
+      <div class="kanan">
+        <h3 id = "nomor-soal">1 / 20</h3>
+        <h3>🔑 <span id = "bantuan">[Input Jumlah Bantuan Tersisi - JS]</span></h3>
+        <h3>❤️ <span id = "nyawa">[Input Jumlah Nyawa Tersisa - JS]</span></h3>
+      </div>
+    </div> 
+  </section>
+
+  <div id="modal-menang" class="hide" data-class="modal-menang" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Selamat Anda Menang !</p> <!-- bisa dipakai buat komentar -->
+        </div>
+        <div class="modal-footer-rexy">
+          <button type="button" onclick="ulangi()" class="btn btn-secondary button" data-dismiss="modal">Ulangi</button>
+          <button type="button" onclick="keluar()" class="btn btn-secondary button" data-dismiss="modal">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="Soal"> 
+    <!-- Start Soal & Komentar -->
+    <img src="images/lontong.png" alt="lontong" class="lontong">
+    <div class="container-soal">
+      <div id="soal" class="box-soal soal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto a hic reprehenderit, optio aperiam, nulla nemo dolore ut sunt soluta necessitatibus. Ex cupiditate minus id eos vel sequi ipsam repudiandae?</div>
+      
+    </div>
+    </section>
+    <div id="modal-pass-level" class="hide" data-class="modal-pass-level" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">JAWABAN MU BENAR!</h5>
+          </div>
+          <div class="modal-body">
+            <p id="modal-komen">Ternyata kamu lumayan jago dalam memainkan nya.</p>
+          </div>
+          <div class="modal-footer-adri">
+            <!-- <button type="button"onclick="tutup()" class="btn btn-secondary button" data-bs-dismiss="modal">Tutup</button> -->
+            <button type="button"onclick="lanjut()" class=" btn btn-primary button">Lanjut</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+  
+  <section id="Jawaban">
+    <!-- Start Jawaban -->
+    <div class="container-fluid">
+      <div class="info">tekan enter untuk cek jawaban</div>
+      <div class="row" id="jawaban">
+        
+      </div>
+      <div class="button-container-fluid button">
+        <button id="buttom-button" class="" onclick="tambahClue()">🔑 Bantuan</button>
+      </div> 
+    </div> 
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
